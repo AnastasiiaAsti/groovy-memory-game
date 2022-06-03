@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(110, 106, 3);
+}
+
+#board {
+    width: 100vw;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    border: 2px solid white;
+    margin-top: 150px;
+}
+
+.cell {
+    display: inline-block;
+    border: 1px solid white;
+}
