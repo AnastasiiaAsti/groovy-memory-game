@@ -6,12 +6,13 @@
 }
 
 #board {
-    width: 100vw;
-    height: 80vh;
+    width: 960px;
+    height: 960px;
     display: grid;
+    align-self: center;
     grid-template-columns: repeat(6, auto);
     border: 2px solid white;
-    margin-top: 150px;
+    margin: 150px auto;
 }
 
 .cell {
