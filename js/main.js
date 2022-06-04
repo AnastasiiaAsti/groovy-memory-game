@@ -1,5 +1,9 @@
 //variables 
-
+//variables for the game board, restart button and result board
+const GAME_BOARD = document.getElementById('board')
+const RESULT_BOARD = document.getElementById('result')
+const RESTART_BTN = document.getElementById('restart')
+//create an array of 18 cards x 2
 const CARDS_ARRAY = [
     {
         name: 'card1',
@@ -146,9 +150,23 @@ const CARDS_ARRAY = [
     }
 ]
 
-const BOARD = document.getElementById('board')
+
 //event listeners
 
 
 
 //functions
+function settingBoard() {
+    for (let i = 0; i < CARDS_ARRAY.length; i++) {
+        let card = document.createElement('img')
+        card.setAttribute('src', 'cards/top_card.png')
+        card.setAttribute('data-id', i)
+        card.setAttribute('border', '3px solid black')
+        card.setAttribute('width', '170px')
+        card.setAttribute('height', '170px')
+        card.addEventListener('click', flipCard)
+        BOARD.appendChild(card)
+    }
+}
+
+settingBoard()
