@@ -165,7 +165,7 @@ function settingBoard() {
         card.setAttribute('width', '170px')
         card.setAttribute('height', '170px')
         card.addEventListener('click', flipCard)
-        BOARD.appendChild(card)
+        GAME_BOARD.appendChild(card)
     }
 }
 

@@ -3,19 +3,44 @@
     margin: 0;
     padding: 0;
     background-color: rgb(110, 106, 3);
+    font-family: 'Pacifico', cursive;
 }
 
 #board {
-    width: 960px;
-    height: 960px;
-    display: grid;
+    width: 1030px;
+    height: 1030px;
+    display: flex;
+    flex-wrap: wrap;
     align-self: center;
-    grid-template-columns: repeat(6, auto);
-    border: 2px solid white;
-    margin: 150px auto;
+    align-items: center;
+    margin: 50px auto ;
+    border: 5px solid black;
 }
 
-.cell {
-    display: inline-block;
-    border: 1px solid white;
+#result {
+    color: rgb(227, 120, 67);
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0 20px 0;
+    font-size: 60px;
+}
+
+.status-board {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+h2 {
+    align-self: center;
+}
+
+button {
+    width: 200px;
+    height: 50px;
+    border: 3px solid black;
+    color: black;
+    font-size: 1.5em;
 }
