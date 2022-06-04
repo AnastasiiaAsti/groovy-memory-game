@@ -156,17 +156,47 @@ const CARDS_ARRAY = [
 
 
 //functions
+//function to set the board
 function settingBoard() {
+    //itterate through the array
     for (let i = 0; i < CARDS_ARRAY.length; i++) {
+        //create a card element for the image in each cell
         let card = document.createElement('img')
+        //add path, index, border and exact size
         card.setAttribute('src', 'css/cards/top_card.png')
         card.setAttribute('data-id', i)
         card.setAttribute('border', '3px solid black')
         card.setAttribute('width', '170px')
         card.setAttribute('height', '170px')
         //card.addEventListener('click', flipCard)
+        //add cards to the game board
         GAME_BOARD.appendChild(card)
     }
 }
 
 settingBoard()
+
+//function to check for matching pairs
+function checkForMatch() {
+    //set a var for all the cards
+    //define 2 cards we going to check
+    //how are we going to check them? against what?
+    //if cards match -> add empty_cell image
+    //if cards do not match -> bring back top_card image
+    //move cards into an empty array
+    //if the amount of cards in the new array of winning cards is the same that was in our current card array -> display a winning message
+}
+
+//function to flip cards
+function flipCard() {
+    //get the index of the card
+    //we want to add the id to the array of cards
+    //after we checked for match if 2 cars were open we want to add empty card or top card.
+    //will need to use setTimeout() to hold off on flipping for couple secs
+}
+
+//function for the restart button
+function handleReset() {
+    //add event listener to the button
+    //upon click we go back to the state of settingBoard
+}
