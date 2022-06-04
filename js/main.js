@@ -1,6 +1,6 @@
 //variables 
 
-const cards = [
+const CARDS = [
     {
         name: 'card1',
         img: 'css/cards/1.jpeg'
@@ -74,3 +74,10 @@ const cards = [
         img: 'css/cards/18.jpeg'
     },
 ]
+
+const BOARD = document.getElementById('board')
+//event listeners
+
+
+
+//functions
