@@ -157,7 +157,8 @@ let chosenCardsId = []
 let cardsWon = []
 
 //event listeners
-
+//to the reset button
+RESTART_BTN.addEventListener('click', handleReset)
 
 
 //functions
@@ -175,7 +176,7 @@ function settingBoard() {
         card.setAttribute('border', '3px solid black')
         card.setAttribute('width', '170px')
         card.setAttribute('height', '170px')
-        //card.addEventListener('click', flipCard)
+        card.addEventListener('click', flipCard)
         //add cards to the game board
         GAME_BOARD.appendChild(card)
     }
@@ -204,6 +205,12 @@ function checkForMatch() {
         //console.log('Try again')
     }
     //if the amount of cards in the new array of winning cards is the same //that was in our current card array -> display a winning message
+    chosenCards = []
+    chosenCardsId = []
+    RESULT.textContent = cardsWon.length
+    if (cardsWon.length === CARDS_ARRAY.length / 2) {
+        WINNING_MSG_TEXT.innerHTML = 'Congrats! You found a pair for everyone ;)'
+        }
 }
 
 //function to flip cards
