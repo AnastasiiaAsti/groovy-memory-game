@@ -207,7 +207,7 @@ function checkForMatch() {
     //if the amount of cards in the new array of winning cards is the same //that was in our current card array -> display a winning message
     chosenCards = []
     chosenCardsId = []
-    RESULT.textContent = cardsWon.length
+    RESULT_BOARD.textContent = cardsWon.length
     if (cardsWon.length === CARDS_ARRAY.length / 2) {
         WINNING_MSG_TEXT.innerHTML = 'Congrats! You found a pair for everyone ;)'
         WINNING_MSG.classList.add('show')
