@@ -38,11 +38,24 @@ h2 {
     align-self: center;
 }
 
-button {
-    width: 200px;
-    height: 50px;
-    border: 3px solid black;
-    color: black;
-    font-size: 1.5em;
+.end-message button {
+    width: 300px;
+    height: 100px;
+    border: 3px solid rgb(227, 120, 67);
+    color: rgb(227, 120, 67);
+    font-size: 2em;
     cursor: pointer;
+}
+
+.end-message {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .6);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
