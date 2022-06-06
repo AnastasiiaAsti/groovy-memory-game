@@ -183,7 +183,10 @@ settingBoard()
 //function to check for matching pairs
 function checkForMatch() {
     //set a var for all the cards
+    let cards = document.querySelectorAll('img')
     //define 2 cards we going to check
+    const cardOne = cardOneId[0]
+    const cardTwo = cardTwoId[1]
     //how are we going to check them? against what?
     //if cards match -> add empty_cell image
     //if cards do not match -> bring back top_card image
