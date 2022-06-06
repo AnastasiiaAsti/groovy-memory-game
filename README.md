@@ -1,7 +1,7 @@
 # concentration-game
 <Groovy Concentration Game>
   A colorfull groovy concentration memory game with differently 
-  patterened cards. Click on any fiend on the board and try to
+  patterened cards (DESKTOP VERSION). Click on any fiend on the board and try to
   find a pair for every card. Good luck ;)
   
   Used Technologies: HTML, CSS, JAVASCRIPT
