@@ -49,7 +49,7 @@ const CARDS_ARRAY = [
     },
     {
         name: 'card6',
-        img: 'cards/6.jpeg'
+        img: 'css/cards/6.jpeg'
     },
     {
         name: 'card6',
