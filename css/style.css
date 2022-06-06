@@ -15,6 +15,7 @@
     align-items: center;
     margin: 50px auto ;
     border: 5px solid black;
+    cursor: pointer;
 }
 
 #result {
@@ -43,4 +44,5 @@ button {
     border: 3px solid black;
     color: black;
     font-size: 1.5em;
+    cursor: pointer;
 }
