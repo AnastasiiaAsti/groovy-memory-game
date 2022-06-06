@@ -45,6 +45,7 @@ h2 {
     color: rgb(227, 120, 67);
     font-size: 2em;
     cursor: pointer;
+    margin-bottom: 30px;
 }
 
 .end-message button:hover {
