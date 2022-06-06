@@ -158,6 +158,8 @@ const CARDS_ARRAY = [
 
 
 //functions
+// function to sort cards randomly
+CARDS_ARRAY.sort(() => 0.5 - Math.random())
 //function to set the board
 function settingBoard() {
     //itterate through the array
