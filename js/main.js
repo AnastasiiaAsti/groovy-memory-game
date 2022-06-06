@@ -210,6 +210,7 @@ function checkForMatch() {
     RESULT.textContent = cardsWon.length
     if (cardsWon.length === CARDS_ARRAY.length / 2) {
         WINNING_MSG_TEXT.innerHTML = 'Congrats! You found a pair for everyone ;)'
+        WINNING_MSG.classList.add('show')
         }
 }
 
@@ -225,4 +226,5 @@ function flipCard() {
 function handleReset() {
     //add event listener to the button
     //upon click we go back to the state of settingBoard
+    WINNING_MSG.classList.remove('show')
 }
