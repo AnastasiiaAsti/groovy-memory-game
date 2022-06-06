@@ -3,6 +3,8 @@
 const GAME_BOARD = document.getElementById('board')
 const RESULT_BOARD = document.getElementById('result')
 const RESTART_BTN = document.getElementById('restart')
+const WINNING_MSG = document.getElementById('end-message')
+const WINNING_MSG_TEXT = document.getElementById('end-message-text')
 //create an array of 18 cards x 2
 const CARDS_ARRAY = [
     {
