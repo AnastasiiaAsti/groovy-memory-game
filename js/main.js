@@ -222,6 +222,8 @@ function flipCard() {
     chosenCardsId.push(cardId)
     //adding CARDS_ARRAY.name to the chosenCards array based on the ids
     chosenCards.push(CARDS_ARRAY[cardId].name)
+    //add an image to the cell
+    this.setAttribute('src', CARDS_ARRAY[cardId].img)
     //after we checked for match if 2 cars were open we want to add empty card or top card.
     //will need to use setTimeout() to hold off on flipping for couple secs
     if (chosenCards.length === 2) {
