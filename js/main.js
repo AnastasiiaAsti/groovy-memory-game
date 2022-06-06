@@ -194,7 +194,7 @@ function checkForMatch() {
     //how are we going to check them? against what?
     //if cards match -> add empty_cell image
     //if cards do not match -> bring back top_card image
-    if (chosenCards[0] === chosenCards[1]) {
+    if (chosenCards[0] === chosenCards[1] && chosenCardsId[0] !== chosenCardsId[1]) {
         cards[cardOneId].setAttribute('src', 'css/cards/empty_cell.png')
         cards[cardTwoId].setAttribute('src', 'css/cards/empty_cell.png')
         //move cards into an empty array
