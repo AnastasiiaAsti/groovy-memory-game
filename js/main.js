@@ -216,8 +216,12 @@ function checkForMatch() {
 
 //function to flip cards
 function flipCard() {
-    //get the index of the card
+    //get the index of the card from the CARD_ARRAY 
+    let cardId = this.getAttribute('data-id')
     //we want to add the id to the array of cards
+    chosenCardsId.push(cardId)
+    //adding CARDS_ARRAY.name to the chosenCards array based on the ids
+    chosenCards.push(CARDS_ARRAY[cardId].name)
     //after we checked for match if 2 cars were open we want to add empty card or top card.
     //will need to use setTimeout() to hold off on flipping for couple secs
 }
