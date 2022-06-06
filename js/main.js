@@ -152,6 +152,9 @@ const CARDS_ARRAY = [
     }
 ]
 
+let chosenCards = []
+let chosenCardsId = []
+let cardsWon = []
 
 //event listeners
 
@@ -185,13 +188,22 @@ function checkForMatch() {
     //set a var for all the cards
     let cards = document.querySelectorAll('img')
     //define 2 cards we going to check
-    const cardOne = cardOneId[0]
-    const cardTwo = cardTwoId[1]
+    const cardOneId = chosenCardsId[0]
+    const cardTwoId = chosenCardsId[1]
     //how are we going to check them? against what?
     //if cards match -> add empty_cell image
     //if cards do not match -> bring back top_card image
-    //move cards into an empty array
-    //if the amount of cards in the new array of winning cards is the same that was in our current card array -> display a winning message
+    if (chosenCards[0] === chosenCards[1]) {
+        cards[cardOneId].setAttribute('src', 'css/cards/empty_cell.png')
+        cards[cardTwoId].setAttribute('src', 'css/cards/empty_cell.png')
+        //move cards into an empty array
+        cardsWon.push(chosenCards)
+    } else {
+        cards[cardOneId].setAttribute('src', 'css/cards/top_card.png')
+        cards[cardTwoId].setAttribute('src', 'css/cards/top_card.png')
+        //console.log('Try again')
+    }
+    //if the amount of cards in the new array of winning cards is the same //that was in our current card array -> display a winning message
 }
 
 //function to flip cards
