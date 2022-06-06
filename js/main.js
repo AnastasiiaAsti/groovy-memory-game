@@ -224,6 +224,9 @@ function flipCard() {
     chosenCards.push(CARDS_ARRAY[cardId].name)
     //after we checked for match if 2 cars were open we want to add empty card or top card.
     //will need to use setTimeout() to hold off on flipping for couple secs
+    if (chosenCards.length === 2) {
+        setTimeout(checkForMatch, 400)
+    }
 }
 
 //function for the restart button
