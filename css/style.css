@@ -47,6 +47,12 @@ h2 {
     cursor: pointer;
 }
 
+.end-message button:hover {
+    font-size: 50px;
+    color: rgb(110, 106, 3);
+    background-color: rgb(227, 120, 67);
+}
+
 .end-message {
     display: none;
     position: fixed;
@@ -58,4 +64,16 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.end-message.show {
+    display: flex;
+}
+
+#end-message-text {
+    color: rgb(227, 120, 67);
+    font-size: 5em;
+    background: transparent;
+    margin-bottom: 1em;
+    text-align: center;
 }
