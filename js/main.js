@@ -157,7 +157,7 @@ let chosenCards = []
 let chosenCardsId = []
 let cardsWon = []
 
-let timerSeconds = 59
+let timerSeconds = 5
 
 //event listeners
 //to the reset button
@@ -242,8 +242,11 @@ function handleReset() {
 }
 
 //functions for timer
-
 const countDown = setInterval(function () {
     timerSeconds--
     TIMER_HEADER.innerHTML = timerSeconds
+    //cut the cutdown when reaches 0
+    if (timerSeconds <= 0) {
+        clearInterval(countDown)
+    }
 },1000)
