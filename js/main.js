@@ -5,6 +5,7 @@ const RESULT_BOARD = document.getElementById('result')
 const RESTART_BTN = document.getElementById('restart')
 const WINNING_MSG = document.getElementById('end-message')
 const WINNING_MSG_TEXT = document.getElementById('end-message-text')
+const TIMER_HEADER = document.getElementById('timer')
 //create an array of 18 cards x 2
 const CARDS_ARRAY = [
     {
@@ -155,6 +156,8 @@ const CARDS_ARRAY = [
 let chosenCards = []
 let chosenCardsId = []
 let cardsWon = []
+
+let timerSecons = 59
 
 //event listeners
 //to the reset button
