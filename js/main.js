@@ -250,4 +250,9 @@ const countDown = setInterval(function () {
         clearInterval(countDown)
         TIMER_HEADER.innerHTML = "Stay Groovy or leave, Man!"
     }
-},1000)
+}, 1000)
+//function to display a timer on the page
+function displayTimer() {
+    //define minutes and seconds.
+    //a\swap innerHTML for the time how it suppose to look
+}
