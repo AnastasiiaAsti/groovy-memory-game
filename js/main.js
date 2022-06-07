@@ -248,5 +248,6 @@ const countDown = setInterval(function () {
     //cut the cutdown when reaches 0
     if (timerSeconds <= 0) {
         clearInterval(countDown)
+        TIMER_HEADER.innerHTML = "Stay Groovy or leave, Man!"
     }
 },1000)

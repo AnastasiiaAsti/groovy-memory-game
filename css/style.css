@@ -13,7 +13,7 @@
     flex-wrap: wrap;
     align-self: center;
     align-items: center;
-    margin: 50px auto ;
+    margin: 10px auto ;
     border: 5px solid black;
     cursor: pointer;
 }
@@ -24,7 +24,7 @@
 
 h1 {
     text-align: center;
-    margin: 20px 0 0 0;
+    margin: 20px 0 20px 0;
     font-size: 60px;
 }
 
