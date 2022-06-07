@@ -24,18 +24,24 @@
 
 h1 {
     text-align: center;
-    margin: 20px 0 20px 0;
+    margin: 20px 0 0 0;
     font-size: 60px;
 }
 
 .status-board {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin: 0 55px 0 55px;
 }
 
 h2 {
     align-self: center;
+    font-size: 45px;
+}
+
+#timer {
+    color: rgb(227, 120, 67);
 }
 
 .end-message button {
@@ -78,3 +84,4 @@ h2 {
     margin-bottom: 1em;
     text-align: center;
 }
+
