@@ -157,7 +157,7 @@ let chosenCards = []
 let chosenCardsId = []
 let cardsWon = []
 
-let timerSecons = 59
+let timerSeconds = 59
 
 //event listeners
 //to the reset button
@@ -240,3 +240,10 @@ function handleReset() {
     //upon click we go back to the state of settingBoard
     WINNING_MSG.classList.remove('show')
 }
+
+//functions for timer
+
+const countDown = setInterval(function () {
+    timerSeconds--
+    TIMER_HEADER.innerHTML = timerSeconds
+},1000)
