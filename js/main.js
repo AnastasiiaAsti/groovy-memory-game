@@ -166,7 +166,8 @@ RESTART_BTN.addEventListener('click', handleReset)
 
 //functions
 // function to sort cards randomly
-CARDS_ARRAY.sort(() => 0.5 - Math.random())
+//CARDS_ARRAY.sort(() => 0.5 - Math.random())
+
 //function to set the board
 function settingBoard() {
     //itterate through the array
@@ -216,7 +217,7 @@ function checkForMatch() {
     if (cardsWon.length === CARDS_ARRAY.length / 2) {
         WINNING_MSG_TEXT.innerHTML = 'Congrats! You found a pair for everyone ;)'
         WINNING_MSG.classList.add('show')
-        }
+    }
 }
 
 //function to flip cards
@@ -241,7 +242,9 @@ function handleReset() {
     //add event listener to the button
     //upon click we go back to the state of settingBoard
     WINNING_MSG.classList.remove('show')
+    window.location.reload()
 }
+
 
 //evoking displayTimer func
 displayTimer(timerSeconds)
