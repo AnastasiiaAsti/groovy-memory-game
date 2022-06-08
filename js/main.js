@@ -200,6 +200,8 @@ function checkForMatch() {
     if (chosenCards[0] === chosenCards[1] && chosenCardsId[0] !== chosenCardsId[1]) {
         cards[cardOneId].setAttribute('src', 'css/cards/empty_cell.png')
         cards[cardTwoId].setAttribute('src', 'css/cards/empty_cell.png')
+        cards[cardOneId].classList.add('clicked')
+        cards[cardTwoId].classList.add('clicked')
         //move cards into an empty array
         cardsWon.push(chosenCards)
     } else {

@@ -85,3 +85,7 @@ h2 {
     text-align: center;
 }
 
+.clicked {
+    pointer-events: none;
+}
+
