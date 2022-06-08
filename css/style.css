@@ -90,3 +90,8 @@ h2 {
     pointer-events: none;
 }
 
+.end-message img {
+    max-height: 30vh;
+    background: transparent;
+}
+
