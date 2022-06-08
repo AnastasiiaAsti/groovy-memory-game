@@ -178,8 +178,8 @@ function settingBoard() {
         card.setAttribute('src', 'css/cards/top_card.png')
         card.setAttribute('data-id', i)
         card.setAttribute('border', '3px solid black')
-        card.setAttribute('width', '170px')
-        card.setAttribute('height', '170px')
+        card.setAttribute('width', '130px')
+        card.setAttribute('height', '130px')
         card.addEventListener('click', flipCard)
         //add cards to the game board
         GAME_BOARD.appendChild(card)
