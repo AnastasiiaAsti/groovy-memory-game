@@ -247,7 +247,7 @@ displayTimer(timerSeconds)
 //functions for timer
 const countDown = setInterval(function () {
     timerSeconds--
-    TIMER_HEADER.innerHTML = timerSeconds
+    displayTimer(timerSeconds)
     //cut the cutdown when reaches 0
     if (timerSeconds <= 0) {
         clearInterval(countDown)
