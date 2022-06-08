@@ -252,7 +252,9 @@ const countDown = setInterval(function () {
     }
 }, 1000)
 //function to display a timer on the page
-function displayTimer() {
+function displayTimer(second) {
     //define minutes and seconds.
+    const min = Math.floor(second / 60)
+    const sec = Math.floor(second % 60)
     //a\swap innerHTML for the time how it suppose to look
 }
