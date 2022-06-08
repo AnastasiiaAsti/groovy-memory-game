@@ -7,8 +7,8 @@
 }
 
 #board {
-    width: 1030px;
-    height: 1030px;
+    width: 790px;
+    height: 790px;
     display: flex;
     flex-wrap: wrap;
     align-self: center;
