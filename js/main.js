@@ -241,6 +241,9 @@ function handleReset() {
     WINNING_MSG.classList.remove('show')
 }
 
+//evoking displayTimer func
+displayTimer(timerSeconds)
+
 //functions for timer
 const countDown = setInterval(function () {
     timerSeconds--
@@ -257,4 +260,5 @@ function displayTimer(second) {
     const min = Math.floor(second / 60)
     const sec = Math.floor(second % 60)
     //a\swap innerHTML for the time how it suppose to look
+    TIMER_HEADER.innerHTML = `${min<10 ? '0': ''}${min}:${sec<10 ? '0': ''}${sec}`
 }
