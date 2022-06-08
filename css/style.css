@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    max-height: 100vh;
     margin: 0;
     padding: 0;
     background-color: rgb(110, 106, 3);
@@ -7,13 +8,13 @@
 }
 
 #board {
-    width: 790px;
-    height: 790px;
+    width: 1180px;
+    height: 530px;
     display: flex;
     flex-wrap: wrap;
     align-self: center;
     align-items: center;
-    margin: 10px auto ;
+    margin: 20px auto;
     border: 5px solid black;
     cursor: pointer;
 }
