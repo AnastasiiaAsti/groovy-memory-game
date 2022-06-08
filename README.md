@@ -6,7 +6,7 @@
   
   Used Technologies: HTML, CSS, JAVASCRIPT
   
-  Link: https://anastasiiaasti.github.io/concentration-game/
+  Link:
   
   Future updates will add responsive versions for multiple devices and levels to the game
   
