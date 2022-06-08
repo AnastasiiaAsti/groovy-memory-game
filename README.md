@@ -6,4 +6,8 @@
   
   Used Technologies: HTML, CSS, JAVASCRIPT
   
+  Link: https://anastasiiaasti.github.io/concentration-game/
+  
+  IceBox: responsive design for the different device sizes, adding levels
+  
 <img width="1464" alt="Screen Shot 2022-06-08 at 3 30 31 PM" src="https://user-images.githubusercontent.com/97631462/172731581-aea131da-4890-49e4-9c06-71030b596793.png">
