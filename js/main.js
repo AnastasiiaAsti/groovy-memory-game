@@ -153,9 +153,9 @@ const CARDS_ARRAY = [
     }
 ]
 
+let arrayWithNames = []
+let arrayWithIds = []
 let chosenCards = []
-let chosenCardsId = []
-let cardsWon = []
 
 let timerSeconds = 120
 
@@ -166,85 +166,7 @@ RESTART_BTN.addEventListener('click', handleReset)
 
 //functions
 // function to sort cards randomly
-CARDS_ARRAY.sort(() => 0.5 - Math.random())
-
-//function to set the board
-function settingBoard() {
-    //itterate through the array
-    for (let i = 0; i < CARDS_ARRAY.length; i++) {
-        //create a card element for the image in each cell
-        let card = document.createElement('img')
-        //add path, index, border and exact size
-        card.setAttribute('src', 'css/cards/top_card.png')
-        card.setAttribute('data-id', i)
-        card.setAttribute('border', '3px solid black')
-        card.setAttribute('width', '130px')
-        card.setAttribute('height', '130px')
-        card.addEventListener('click', flipCard)
-        //add cards to the game board
-        GAME_BOARD.appendChild(card)
-    }
-}
-
-settingBoard()
-
-//function to check for matching pairs
-function checkForMatch() {
-    //set a var for all the cards
-    let cards = document.querySelectorAll('img')
-    //define 2 cards we going to check
-    const cardOneId = chosenCardsId[0]
-    const cardTwoId = chosenCardsId[1]
-    //how are we going to check them? against what?
-    //if cards match -> add empty_cell image
-    //if cards do not match -> bring back top_card image
-    if (chosenCards[0] === chosenCards[1] && chosenCardsId[0] !== chosenCardsId[1]) {
-        cards[cardOneId].setAttribute('src', 'css/cards/empty_cell.png')
-        cards[cardTwoId].setAttribute('src', 'css/cards/empty_cell.png')
-        cards[cardOneId].classList.add('clicked')
-        cards[cardTwoId].classList.add('clicked')
-        //move cards into an empty array
-        cardsWon.push(chosenCards)
-    } else {
-        cards[cardOneId].setAttribute('src', 'css/cards/top_card.png')
-        cards[cardTwoId].setAttribute('src', 'css/cards/top_card.png')
-        //console.log('Try again')
-    }
-    //if the amount of cards in the new array of winning cards is the same //that was in our current card array -> display a winning message
-    chosenCards = []
-    chosenCardsId = []
-    RESULT_BOARD.textContent = cardsWon.length
-    if (cardsWon.length === CARDS_ARRAY.length / 2) {
-        WINNING_MSG_TEXT.innerHTML = 'Congrats! You found a pair for everyone ;)'
-        WINNING_MSG.classList.add('show')
-    }
-}
-
-//function to flip cards
-function flipCard() {
-    //get the index of the card from the CARD_ARRAY 
-    let cardId = this.getAttribute('data-id')
-    //we want to add the id to the array of cards
-    chosenCardsId.push(cardId)
-    //adding CARDS_ARRAY.name to the chosenCards array based on the ids
-    chosenCards.push(CARDS_ARRAY[cardId].name)
-    //add an image to the cell
-    this.setAttribute('src', CARDS_ARRAY[cardId].img)
-    //after we checked for match if 2 cars were open we want to add empty card or top card.
-    //will need to use setTimeout() to hold off on flipping for couple secs
-    if (chosenCards.length === 2) {
-        setTimeout(checkForMatch, 400)
-    }
-}
-
-//function for the restart button
-function handleReset() {
-    //add event listener to the button
-    //upon click we go back to the state of settingBoard
-    WINNING_MSG.classList.remove('show')
-    window.location.reload()
-}
-
+//CARDS_ARRAY.sort(() => 0.5 - Math.random())
 
 //evoking displayTimer func
 displayTimer(timerSeconds)
@@ -267,3 +189,84 @@ function displayTimer(second) {
     //a\swap innerHTML for the time how it suppose to look
     TIMER_HEADER.innerHTML = `${min<10 ? '0': ''}${min}:${sec<10 ? '0': ''}${sec}`
 }
+
+//function to set the board
+function settingBoard() {
+    //itterate through the array
+    for (let i = 0; i < CARDS_ARRAY.length; i++) {
+        //create a card element for the image in each cell
+        let card = document.createElement('img')
+        //add path, index, border and exact size
+        card.setAttribute('src', 'css/cards/top_card.png')
+        card.setAttribute('data-id', i)
+        card.setAttribute('border', '3px solid black')
+        card.setAttribute('width', '130px')
+        card.setAttribute('height', '130px')
+        card.addEventListener('click', flipCard)
+        //add cards to the game board
+        GAME_BOARD.appendChild(card)
+    }
+}
+
+settingBoard()
+
+//function to flip cards
+function flipCard() {
+    //get the index of the card from the CARD_ARRAY 
+    let cardId = this.getAttribute('data-id')
+    let cardName = this.getAttribute('name')
+    //we want to add the id to the array of cards
+    arrayWithIds.push(cardId)
+    //adding CARDS_ARRAY.name to the chosenCards array based on the ids
+    arrayWithNames.push(cardName)
+    //add an image to the cell
+    this.setAttribute('src', CARDS_ARRAY[cardId].img)
+    //after we checked for match if 2 cars were open we want to add empty card or top card.
+    //will need to use setTimeout() to hold off on flipping for couple secs
+    if (arrayWithNames.length === 2) {
+        setTimeout(checkForMatch, 400)
+    }
+}
+
+//function to check for matching pairs
+function checkForMatch() {
+    //set a var for all the cards
+    let cards = document.querySelectorAll('img')
+    //define 2 cards we going to check
+    const cardOneId = arrayWithIds[0]
+    const cardTwoId = arrayWithIds[1]
+    //how are we going to check them? against what?
+    //if cards match -> add empty_cell image
+    //if cards do not match -> bring back top_card image
+    if (arrayWithNames[0] === arrayWithNames[1] && arrayWithIds[0] !== arrayWithIds[1]) {
+        cards[cardOneId].setAttribute('src', 'css/cards/empty_cell.png')
+        cards[cardTwoId].setAttribute('src', 'css/cards/empty_cell.png')
+        cards[cardOneId].classList.add('clicked')
+        cards[cardTwoId].classList.add('clicked')
+        //move cards into an empty array
+        chosenCards.push(arrayWithNames)
+    } else {
+        cards[cardOneId].setAttribute('src', 'css/cards/top_card.png')
+        cards[cardTwoId].setAttribute('src', 'css/cards/top_card.png')
+        //console.log('Try again')
+    }
+    //if the amount of cards in the new array of winning cards is the same //that was in our current card array -> display a winning message
+    arrayWithNames = []
+    arrayWithIds = []
+    RESULT_BOARD.innerHTML = chosenCards.length
+    if (chosenCards.length === CARDS_ARRAY.length / 2) {
+        WINNING_MSG_TEXT.innerHTML = 'Congrats! You found a pair for everyone ;)'
+        WINNING_MSG.classList.add('show')
+    }
+}
+
+
+//function for the restart button
+function handleReset() {
+    //add event listener to the button
+    //upon click we go back to the state of settingBoard
+    WINNING_MSG.classList.remove('show')
+    window.location.reload()
+}
+
+
