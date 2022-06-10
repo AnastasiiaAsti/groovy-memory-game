@@ -268,4 +268,7 @@ function handleReset() {
     window.location.reload()
 }
 
-
+function forceWin() {
+    WINNING_MSG_TEXT.innerHTML = 'Congrats! You found a pair for everyone ;)'
+    WINNING_MSG.classList.add('show')
+}
