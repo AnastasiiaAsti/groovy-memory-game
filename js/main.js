@@ -157,7 +157,7 @@ let arrayWithNames = []
 let arrayWithIds = []
 let chosenCards = []
 
-let timerSeconds = 120
+let timerSeconds = 10
 
 //event listeners
 //to the reset button
