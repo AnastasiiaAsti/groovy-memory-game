@@ -157,7 +157,7 @@ let arrayWithNames = []
 let arrayWithIds = []
 let chosenCards = []
 
-let timerSeconds = 120
+let timerSeconds = 10
 
 //event listeners
 //to the reset button
@@ -191,7 +191,7 @@ function displayTimer(second) {
 }
 
 //function to set the board
-function settingBoard() {
+function render() {
     //itterate through the array
     for (let i = 0; i < CARDS_ARRAY.length; i++) {
         //create a card element for the image in each cell
@@ -208,7 +208,7 @@ function settingBoard() {
     }
 }
 
-settingBoard()
+render()
 
 //function to flip cards
 function flipCard() {
