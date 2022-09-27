@@ -95,3 +95,16 @@ h2 {
     background: transparent;
 }
 
+@media (max-width: 1180px) {
+    #board {
+        width: 790px;
+        height: 787px;
+    }
+}
+
+@media (max-width: 790px) {
+    #board {
+        width: 530px;
+        height: 1180px;
+    }
+}
