@@ -1,13 +1,22 @@
-# concentration-game
-<Groovy Concentration Game>
-  A colorfull groovy concentration memory game with differently 
-  patterened cards (DESKTOP VERSION ONLY). Click on any fiend on the board and try to
-  find a pair for every card. Good luck ;)
+# Groovy Memory Game
+
+(Desktop or Med devices ONLY)
+
+Immerse yourself in a world of colorful cards, captivating graphics, and engaging gameplay. The objective is simple: flip and match pairs of cards to uncover hidden patterns and reveal the treasures within.
+
+Try it out <a href="https://anastasiiaasti.github.io/concentration-game/">HERE</a>
   
-  Used Technologies: HTML, CSS, JAVASCRIPT
+# Tech Used:
+
+- Html, Css, JavaScript
+
+<img width="300" alt="memory_1" src="https://github.com/AnastasiiaAsti/concentration-game/assets/97631462/780bcb68-3736-40ee-9f1c-dabf561321d6">
+<img width="300" alt="memory_2" src="https://github.com/AnastasiiaAsti/concentration-game/assets/97631462/e27be5e9-626a-4d1d-81db-7bb7dc792760">
+
+
+
+# IceBox: 
+ 
+ - responsive design for the different device sizes, adding levels
+ - adding levels
   
-  Link: https://anastasiiaasti.github.io/concentration-game/
-  
-  IceBox: responsive design for the different device sizes, adding levels
-  
-<img width="1464" alt="Screen Shot 2022-06-08 at 3 30 31 PM" src="https://user-images.githubusercontent.com/97631462/172731581-aea131da-4890-49e4-9c06-71030b596793.png">
