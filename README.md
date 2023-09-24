@@ -4,7 +4,7 @@
 
 Immerse yourself in a world of colorful cards, captivating graphics, and engaging gameplay. The objective is simple: flip and match pairs of cards to uncover hidden patterns and reveal the treasures within.
 
-Try it out <a href="https://anastasiiaasti.github.io/concentration-game/">HERE</a>
+Try it out <a href="https://groovygame.netlify.app/">HERE</a>
   
 # Tech Used:
 
